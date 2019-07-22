@@ -18,7 +18,7 @@
 //
 // To run this integrations use:
 //
-//     kamel run --runtime groovy examples/camel-caffeine.groovy
+//     kamel run examples/camel-caffeine.groovy
 //
 
 import com.github.benmanes.caffeine.cache.Caffeine

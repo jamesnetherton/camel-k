@@ -20,10 +20,6 @@ import java.util.concurrent.ThreadLocalRandom
 //
 // To run this integrations use:
 //
-//     kamel run --runtime groovy examples/routes.groovy
-//
-// Or leveraging runtime detection
-//
 //     kamel run examples/routes.groovy
 //
 

@@ -18,10 +18,6 @@
 //
 // To run this integrations use:
 //
-//     kamel run --runtime kotlin examples/kotlin-routes.kts
-//
-// Or leveraging runtime detection
-//
 //     kamel run examples/kotlin-routes.kts
 //
 
