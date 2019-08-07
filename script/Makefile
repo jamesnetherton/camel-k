@@ -169,6 +169,12 @@ images-dev: test package-artifacts
 	cp builder build/_output/bin
 	operator-sdk build $(IMAGE_NAME):$(VERSION)
 
+images-dev-crc: test package-artifacts
+	mkdir -p build/_maven_output
+	mkdir -p build/_output/bin
+	cp builder build/_output/bin
+	./script/build_images_crc.sh $(IMAGE_NAME):$(VERSION)
+
 images-push:
 	docker push $(IMAGE_NAME):$(VERSION)
 
@@ -203,4 +209,4 @@ install-minishift:
 install-minikube:
 	./script/install_minikube.sh
 
-.PHONY: build build-operator build-kamel build-resources build-builder build-olm unsnapshot-olm dep codegen images images-dec images-push images-push-staging test check test-integration clean release cross-compile package-examples set-version git-tag
+.PHONY: build build-operator build-kamel build-resources build-builder build-olm unsnapshot-olm dep codegen images images-dev images-dev-crc images-push images-push-staging test check test-integration clean release cross-compile package-examples set-version git-tag
